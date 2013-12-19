@@ -1,0 +1,10 @@
+<% @game.all_cells.each do |row| %>
+  <% row.each do |cell| %>
+    <% if cell.state == "alive" %>
+      <div class="alive"></div>
+    <% else %>
+      <div class="dead"></div>
+    <% end %>
+  <% end %>
+  <br>
+<% end %>
