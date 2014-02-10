@@ -1,0 +1,23 @@
+body {
+  font-family: courier, monospace;
+  padding: 20px;
+}
+
+.row {
+  white-space: nowrap;
+}
+
+.cell {
+  display: inline-block;
+  height: 15px;
+  width: 15px;
+  margin: -2px;
+}
+
+.alive {
+  background-color: black;
+}
+
+.dead {
+  background-color: red;
+}
