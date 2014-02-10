@@ -24,7 +24,18 @@ class Board
 		end
 	end
 
-
+  def randomize_start
+    starting_array = []
+    cell_total = self.height * self.width
+    min = (cell_total*0.15).to_i
+    max = (cell_total*0.75).to_i
+    rand(min..max).times do
+      row = self.all_cells.sample
+      column = row.sample
+      starting_array << [self.all_cells.index(row), row.index(column)]
+    end
+    starting_array.uniq!
+  end
 
 	def evaluate_all
 		all_cells.each do |row|
