@@ -24,6 +24,8 @@ class Board
 		end
 	end
 
+
+
 	def evaluate_all
 		all_cells.each do |row|
 			row.each {|cell| cell.evaluate_cell(self)}

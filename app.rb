@@ -12,7 +12,7 @@ module Life
 			@game.starting_move!(starting_array)
 			@game.evaluate_all
 
-			erb :index
+			haml :index
 		end
 
 	end

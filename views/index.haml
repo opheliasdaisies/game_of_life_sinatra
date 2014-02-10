@@ -1,0 +1,8 @@
+.board
+  - @game.all_cells.each do |row|
+    .row
+      - row.each do |cell|
+        - if cell.state == "alive"
+          .cell.alive
+        - else
+          .cell.dead
