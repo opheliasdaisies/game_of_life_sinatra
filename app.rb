@@ -14,5 +14,31 @@ module Life
 			haml :index
 		end
 
+    helpers do
+
+      def run_game(game)
+        moves = []
+        loop do
+          game.evaluate_all
+          game.tick!
+          moves << get_cell_state(game.all_cells)
+        end
+        moves
+      end
+
+      def get_cell_state(board)
+        simple_board = []
+        board.each do |row|
+          row_array = []
+          row.each do |cell|
+            cell.state == "alive" ? row_array << 1 : row_array << 0
+          end
+          simple_board << row_array
+        end
+        simple_board
+      end
+
+    end
+
 	end
 end
