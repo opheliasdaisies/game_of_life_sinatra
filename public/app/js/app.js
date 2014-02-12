@@ -7,12 +7,12 @@ var lifeApp = angular.module("lifeApp", [
 
 lifeApp.config(["$routeProvider",
   function($routeProvider){
-    when("/random", {
-      templateUrl: "partials/randomBoard.html",
-      controller: "BoardCtrl"
-    }).
-    otherwise({
-      redirectTo: "/random"
-    });
-  }
-  ]);
+    $routeProvider.
+      when("/random", {
+        templateUrl: "partials/randomBoard.html",
+        controller: "BoardCtrl"
+      }).
+      otherwise({
+        redirectTo: "/random"
+      });
+  }]);
