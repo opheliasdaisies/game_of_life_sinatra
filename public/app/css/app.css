@@ -7,11 +7,15 @@ body {
   white-space: nowrap;
 }
 
+.cell-container {
+  display: inline-block;
+}
+
 .cell {
   display: inline-block;
   height: 15px;
   width: 15px;
-  margin: -2px;
+  margin: 2px;
   border-radius: 20%;
 }
 
