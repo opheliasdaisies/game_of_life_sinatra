@@ -58,6 +58,14 @@ class Board
 		end
 	end
 
+  def cell_states
+    all_cells.map do |row|
+      row.map do |cell|
+        cell.state
+      end
+    end
+  end
+
 	Position = Struct.new(:y, :x)
 	def coordinates(array)
 		array.collect do |item|
