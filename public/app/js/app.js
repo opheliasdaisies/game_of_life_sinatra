@@ -9,7 +9,7 @@ lifeApp.config(["$routeProvider",
   function($routeProvider){
     when("/random", {
       templateUrl: "partials/randomBoard.html",
-      controller: "RandBoardCtrl"
+      controller: "BoardCtrl"
     }).
     otherwise({
       redirectTo: "/random"
