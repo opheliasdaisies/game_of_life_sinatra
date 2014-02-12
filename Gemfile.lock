@@ -4,14 +4,26 @@ GEM
     backports (3.3.3)
     bond (0.4.3)
     eventmachine (1.0.3)
+    ffi (1.9.3)
     haml (4.0.5)
       tilt
+    listen (1.0.3)
+      rb-fsevent (>= 0.9.3)
+      rb-inotify (>= 0.9)
+      rb-kqueue (>= 0.2)
     multi_json (1.8.4)
     rack (1.5.2)
     rack-protection (1.5.1)
       rack
     rack-test (0.6.2)
       rack (>= 1.0)
+    rb-fsevent (0.9.4)
+    rb-inotify (0.9.3)
+      ffi (>= 0.5.0)
+    rb-kqueue (0.2.0)
+      ffi (>= 0.5.0)
+    rerun (0.8.2)
+      listen (~> 1.0.3)
     ripl (0.7.0)
       bond (~> 0.4.2)
     ripl-multi_line (0.3.1)
@@ -20,8 +32,6 @@ GEM
       rack (>= 1.0)
       rack-test (>= 0.5)
       ripl (>= 0.3.5)
-    shotgun (0.9)
-      rack (>= 1.0)
     sinatra (1.4.4)
       rack (~> 1.4)
       rack-protection (~> 1.4)
@@ -46,7 +56,7 @@ PLATFORMS
 DEPENDENCIES
   haml
   multi_json
-  shotgun
+  rerun
   sinatra
   sinatra-contrib
   tux

@@ -7,5 +7,5 @@ gem "multi_json"
 
 group :development do
   gem "tux"
-  gem "shotgun"
+  gem "rerun"
 end
