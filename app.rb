@@ -18,15 +18,15 @@ module Life
     end
 
     get "/random_board" do
-      board = Board.new(10,10)
+      board = Board.new(30,40)
       board.starting_move!(board.randomize_start)
       turns = []
       turns << board.cell_states
-      # 50.times do
-      #   board.evaluate_all
-      #   board.tick!
-      #   turns << board.cell_states
-      # end
+      50.times do
+        board.evaluate_all
+        board.tick!
+        turns << board.cell_states
+      end
 
       json turns
     end
