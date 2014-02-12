@@ -5,6 +5,7 @@ body {
 
 .row {
   white-space: nowrap;
+  margin-bottom: -4px;
 }
 
 .cell-container {
@@ -12,10 +13,9 @@ body {
 }
 
 .cell {
-  display: inline-block;
   height: 15px;
   width: 15px;
-  margin: 2px;
+  margin: 3px;
   border-radius: 20%;
 }
 
