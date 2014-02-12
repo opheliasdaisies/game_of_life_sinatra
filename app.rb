@@ -10,7 +10,7 @@ module Life
   
     configure do
       set :root, File.dirname(__FILE__)
-      set :public_folder, "public"
+      set :public_folder, "public/app"
     end
 
     get "/" do
@@ -27,7 +27,7 @@ module Life
       #   board.tick!
       #   turns << board.cell_states
       # end
-      
+
       json turns
     end
 
