@@ -17,6 +17,14 @@ class Board
 		array
 	end
 
+  def populate_board(array)
+    all_cells.map do |row|
+      row.map do |cell|
+        cell.state = array[all_cells.index(row)][row.index(cell)]
+      end
+    end
+  end
+
 	def starting_move!(array)
 		@live_cells = coordinates(array)
 		live_cells.each do |coordinate|
