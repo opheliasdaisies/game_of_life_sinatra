@@ -7,7 +7,7 @@ require_relative "./lib/cell"
 module Life
 	class Game < Sinatra::Application
     helpers Sinatra::JSON
-    enable :sessions
+    use Rack::Session::Pool
   
     configure do
       set :root, File.dirname(__FILE__)
@@ -28,21 +28,21 @@ module Life
         board.tick!
         turns << board.cell_states
       end
-      session[:state] = turns[-1]
+      session[:board] = board
 
       json turns
     end
 
     get '/tick_board' do
-      board = Board.new(30,40)
-      # board.populate_board(session[:state])
-      board.starting_move!(board.randomize_start)
+      board = session[:board]
       turns = []
       50.times do
         board.evaluate_all
         board.tick!
         turns << board.cell_states
       end
+      session[:board] = board
+
       json turns
     end
 
