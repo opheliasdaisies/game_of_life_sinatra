@@ -3,6 +3,10 @@ body {
   padding: 20px;
 }
 
+footer {
+  margin-top: 50px;
+}
+
 .description {
   width: 50%;
   display: inline-block;
