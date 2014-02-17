@@ -3,6 +3,18 @@ body {
   padding: 20px;
 }
 
+.description {
+  width: 50%;
+  display: inline-block;
+}
+
+.board {
+  display: inline-block;
+  margin: 0 35px;
+  position: absolute;
+  top: 85px;
+}
+
 .row {
   white-space: nowrap;
   margin-bottom: -4px;
@@ -15,7 +27,7 @@ body {
 .cell {
   height: 15px;
   width: 15px;
-  margin: 3px;
+  margin: 1px;
   border-radius: 20%;
 }
 

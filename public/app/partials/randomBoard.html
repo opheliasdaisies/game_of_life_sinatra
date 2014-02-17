@@ -1,3 +1,12 @@
+<div class="description">
+  <p>Conway&#8217;s Game of Life is a zero-player simulation. There are four rules:</p>
+  <ol>
+    <li>Any live cell with fewer than two live neighbours dies, as if caused by under-population.</li>
+    <li>Any live cell with two or three live neighbours lives on to the next generation.</li>
+    <li>Any live cell with more than three live neighbours dies, as if by overcrowding.</li>
+    <li>Any dead cell with exactly three live neighbours becomes a live cell, as if by reproduction.</li>
+  </ol>
+</div>
 <div class="board">
   <div class="row" ng-repeat="row in boards[0] track by $index">
     <div class="cell-container" ng-repeat="cell in row track by $index">

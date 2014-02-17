@@ -19,7 +19,7 @@ module Life
     end
 
     get "/random_board" do
-      board = Board.new(30,40)
+      board = Board.new(20,20)
       board.starting_move!(board.randomize_start)
       turns = []
       turns << board.cell_states
