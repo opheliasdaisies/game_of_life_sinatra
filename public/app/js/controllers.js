@@ -13,7 +13,7 @@ lifeApp.controller("BoardCtrl", ["$scope", "$http", "$timeout",
         $timeout(nextMove, 1000);
         if ($scope.boards.length < 20 && loading == false){
           loading = true;
-          $http.get("http://localhost:4000/tick_board").success(function(data){
+          $http.get("/tick_board").success(function(data){
             $scope.boards = $scope.boards.concat(data);
             loading = false;
           });
